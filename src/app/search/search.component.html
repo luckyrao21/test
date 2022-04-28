@@ -1,0 +1,28 @@
+<p>search works!</p>
+
+<div class="container mt-4">
+    <div class="form-group">
+      <input type="text" class="form-control" (keyup)="search()"  [(ngModel)]="searchTxt" placeholder="enter to search">
+      <!-- <button class="btn btn-primary mt-3" (click)="search()">Search</button> -->
+    </div>
+</div>
+
+
+<div class="container mt-5">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>name</th>
+          <th>image</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of DATA">
+          <td>{{data.name}}</td>
+          <td><img src="{{data.image}}" width="150px" height="150px" alt=""></td>
+          <td>{{data.price}}</td>
+        </tr>
+      </tbody>
+    </table>
+</div>
